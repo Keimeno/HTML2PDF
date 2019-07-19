@@ -1,14 +1,14 @@
 # HTML2PDF
 ### Table of Contents
 1. Client Side Setup
-   1. jsPDF
-   2. Example
+      1. jsPDF
+      2. Example
 2. Server Side Setup
-   1. wkhtmltopdf
-   2. Python (pdfkit module)
+      1. wkhtmltopdf
+      2. Python (pdfkit module)
 3. Pros and Cons
-   1. jsPDF and html2canvas
-   2. wkhtmltopdf
+      1. jsPDF and html2canvas
+      2. wkhtmltopdf
 ### Client Side Setup
 #### jsPDF
 Import the latest version to your page using a CDN.
