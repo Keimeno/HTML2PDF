@@ -22,8 +22,8 @@ As an example of this:
 ```
 var doc = new jsPDF();
 
-doc.text(‘Hello world!’, 10, 10);
-doc.save(‘a4.pdf’);
+doc.text('Hello world!', 10, 10);
+doc.save('a4.pdf');
 ```
 
 Further examples can be found on their [documentation page](http://raw.githack.com/MrRio/jsPDF/master/docs/).
@@ -47,17 +47,17 @@ Here is the corresponding code to this example:
 
 ```
 function print() {
-    html2canvas(document.querySelector(“body”)).then(canvas => {
-        var imgData = canvas.toDataURL(“image/jpeg”);
-        var pdf = new jsPDF(“p”, “mm”, “a4”);
+    html2canvas(document.querySelector('body')).then(canvas => {
+        var imgData = canvas.toDataURL('image/jpeg');
+        var pdf = new jsPDF('p', 'mm', 'a4');
         var pageWidth = pdf.internal.pageSize.width;
         var pageHeight = pdf.internal.pageSize.height;
         var imageWidth = canvas.width;
         var imageHeight = canvas.height;
 
         var ratio = imageWidth/imageHeight >= pageWidth/pageHeight ? pageWidth/imageWidth : pageHeight/imageHeight;
-        pdf.addImage(imgData, ‘JPEG’, 0, 0, imageWidth * ratio, imageHeight * ratio);
-        pdf.save(“demo.pdf”);
+        pdf.addImage(imgData, 'JPEG', 0, 0, imageWidth * ratio, imageHeight * ratio);
+        pdf.save('demo.pdf');
     });
 }
 ```
@@ -84,10 +84,10 @@ Here’s a quick example of how you can convert a webpage to HTML with pdfkit:
 import pdfkit
 
 # Create a PDF file from a URL. 
-pdfkit.from_url(‘https://en.wikipedia.org/wiki/Wiki’, ‘demo1.pdf’)
+pdfkit.from_url('https://en.wikipedia.org/wiki/Wiki', 'demo1.pdf')
 
 # Create a PDF file from a file. 
-pdfkit.from_file(‘../client_side/wiki.html’, ‘demo2.pdf’)
+pdfkit.from_file('../client_side/wiki.html', 'demo2.pdf')
 ```
 You have the option to convert a pdf file from a webpage or a local HTML file.
 
